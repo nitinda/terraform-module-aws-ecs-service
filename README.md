@@ -3,7 +3,7 @@
 
 ## _General_
 
-_This module can be used to deploy a_ **ECS Service** _on AWS Cloud Provider......_
+_This module can be used to deploy a_ **_ECS Service_** _on AWS Cloud Provider......_
 
 
 ---
