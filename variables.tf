@@ -5,7 +5,7 @@ variable "name" {
 
 variable "capacity_provider_strategy" {
   description = "The capacity provider strategy to use for the service"
-  default     = []
+  default     = {}
   type        = any
 }
 
