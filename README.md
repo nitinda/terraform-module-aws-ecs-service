@@ -10,7 +10,7 @@ _This module can be used to deploy a_ **_ECS Service_** _on AWS Cloud Provider..
 
 ## _Prerequisites_
 
-_This module needs **Terraform 0.11.14** or newer._
+_This module needs_ **_Terraform 0.12.23_** _or newer._
 _You can download the latest Terraform version from_ [_here_](https://www.terraform.io/downloads.html).
 
 
