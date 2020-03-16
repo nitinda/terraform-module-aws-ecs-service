@@ -53,7 +53,7 @@ _The variables required in order for the module to be successfully called from t
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
 |:----|:----|-----:|:---:|
 | **_name_** | _The name of the service_ | _string_ | **_Required_** |
-| **_capacity\_provider\_strategy_** | _The capacity provider strategy to use for the service_ | _any_ | **_Optional <br/> (Default - [])_** |
+| **_capacity\_provider\_strategy_** | _The capacity provider <br/> strategy to use for the service_ | _any_ | **_Optional <br/> (Default - [])_** |
 | **_cluster_** | _ARN of an ECS cluster_ | _string_ | **_Optional <br/> (Default - null)_** |
 | **_deployment\_controller_** | _Configuration block containing <br/> deployment controller configuration_ | _map(string)_ | **_Optional <br/> (Default - {})_** |
 | **_deployment\_maximum\_percent_** | _The upper limit of the number of running tasks that <br/> can be running in a service during a deployment_ | _string_ | **_Optional <br/> (Default - null)_** |
