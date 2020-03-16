@@ -20,7 +20,7 @@ _You can download the latest Terraform version from_ [_here_](https://www.terraf
 
 _Below we are able to check the resources that are being created as part of this module call:_
 
-- _**ECS Service**_
+- **_ECS Service_**
 
 
 ---
@@ -32,12 +32,14 @@ _Below we are able to check the resources that are being created as part of this
 _To use this module, add the following call to your code:_
 
 ```tf
-module "ecs_task_definition" {
+module "ecs_service" {
   source = "git::https://github.com/nitinda/terraform-module-aws-ecs-service.git?ref=master"
 
-  # Pass in relevant inputs required for this module here
-  # e.g. vpc_id = "${data.terraform_remote_state.networking_shared_services.vpc_id}"
-
+  # Tags
+  tags = {
+      Project      = "POC"
+      Environment  = "prod"
+  }
 }
 ```
 
@@ -48,8 +50,10 @@ module "ecs_task_definition" {
 
 _The variables required in order for the module to be successfully called from the deployment repository are the following:_
 
-- _**Details are in respective branch.**_
+|**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
+|:----|:----|-----:|:---:|
 
+| **_tags_** | _Key-value mapping of resource tags_ | _map(string)_ | **_Required_** |
 
 ---
 
@@ -61,8 +65,9 @@ _The variables required in order for the module to be successfully called from t
 _This module has the following outputs:_
 
 
-- _**Details are in respective branch.**_
-
+- **_id_**
+- **_name_**
+- **_cluster_**
 
 
 ### _Usage_
