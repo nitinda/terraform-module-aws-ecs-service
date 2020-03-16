@@ -2,7 +2,7 @@ resource "aws_ecs_service" "ecs_service" {
   name = var.name
   
   dynamic "capacity_provider_strategy" {
-    for_each = var.capacity_provider_strategy
+    for_each = length(keys(var.capacity_provider_strategy)) == 0 ? [] : [var.capacity_provider_strategy]
     content {
       base              = lookup(capacity_provider_strategy.value, "base", null)
       capacity_provider = capacity_provider_strategy.value.capacity_provider
@@ -79,4 +79,3 @@ resource "aws_ecs_service" "ecs_service" {
   tags            = var.tags
   task_definition = var.task_definition
 }
-
