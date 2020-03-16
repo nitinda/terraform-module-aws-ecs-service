@@ -35,13 +35,18 @@ _To use this module, add the following call to your code:_
 module "ecs_service" {
   source = "git::https://github.com/nitinda/terraform-module-aws-ecs-service.git?ref=master"
 
-  # Tags
-  tags = {
-      Project      = "POC"
-      Environment  = "prod"
+  providers = {
+    aws = aws.services
   }
+
+  name            = "ecs-service"
+  cluster         = "ecs-cluster"
+  task_definition = var.task_definition
+ 
 }
 ```
+
+
 
 
 ---
