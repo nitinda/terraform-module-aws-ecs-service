@@ -69,7 +69,7 @@ _The variables required in order for the module to be successfully called from t
 | **_propagate\_tags_** | _Specifies whether to propagate the tags from <br/> the task definition or the service to the tasks_ | _string_ | **_Optional <br/> (Default - null)_** |
 | **_scheduling\_strategy_** | _The service discovery registries for the service_ | _string_ | **_Optional <br/> (Default - REPLICA)_** |
 | **_service\_registries_** | _The platform version on which to run your service_ | _map(string)_ | **_Optional <br/> (Default - {})_** |
-| **_tags_** | _Key-value mapping of resource tags_ | _map(string)_ | **_Required_** |
+| **_tags_** | _Key-value mapping of resource tags_ | _map(string)_ | **_Optional <br/> (Default - {})_** |
 | **_task\_definition_** | _The family and revision (family:revision) <br/> or full ARN of the task definition <br/> that you want to run in your service_ | _string_ | **_Required_** |
 
 
