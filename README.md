@@ -63,8 +63,14 @@ _The variables required in order for the module to be successfully called from t
 | **_health\_check\_grace\_period\_seconds_** | _Seconds to ignore failing load balancer health <br/> checks on newly instantiated tasks to prevent premature shutdown_ | _number_ | **_Optional <br/> (Default - 0)_** |
 | **_iam\_role_** | _ARN of the IAM role that allows Amazon ECS to <br/> make calls to your load balancer on your behalf_ | _string_ | **_Optional <br/> (Default - null)_** |
 | **_launch\_type_** | _The launch type on which to run your service_ | _string_ | **_Optional <br/> (Default - EC2)_** |
-
+| **_load\_balancer_** | _A load balancer block_ | _any_ | **_Optional <br/> (Default - {})_** |
+| **_network\_configuration_** | _The network configuration for the service_ | _any_ | **_Optional <br/> (Default - {})_** |
+| **_ordered\_placement\_strategy_** | _Service level strategy rules that are <br/> taken into consideration during task placement_ | _map(string)_ | **_Optional <br/> (Default - any)_** |
+| **_propagate\_tags_** | _Specifies whether to propagate the tags from <br/> the task definition or the service to the tasks_ | _string_ | **_Optional <br/> (Default - null)_** |
+| **_scheduling\_strategy_** | _The service discovery registries for the service_ | _string_ | **_Optional <br/> (Default - REPLICA)_** |
+| **_service\_registries_** | _The platform version on which to run your service_ | _map(string)_ | **_Optional <br/> (Default - {})_** |
 | **_tags_** | _Key-value mapping of resource tags_ | _map(string)_ | **_Required_** |
+| **_task\_definition_** | _The family and revision (family:revision) or full ARN of <br/> the task definition that you want to run in your service_ | _string_ | **_Required_** |
 
 
 ---
