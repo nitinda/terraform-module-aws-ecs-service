@@ -57,7 +57,7 @@ _The variables required in order for the module to be successfully called from t
 | **_cluster_** | _ARN of an ECS cluster_ | _string_ | **_Optional <br/> (Default - null)_** |
 | **_deployment\_controller_** | _Configuration block containing <br/> deployment controller configuration_ | _map(string)_ | **_Optional <br/> (Default - {})_** |
 | **_deployment\_maximum\_percent_** | _The upper limit of the number of running tasks that <br/> can be running in a service during a deployment_ | _string_ | **_Optional <br/> (Default - null)_** |
-| **_deployment\_minimum\_healthy\_percent_** | _The lower limit of the number of running tasks that <br/> must remain running and healthy in a service during a deployment_ | _string_ | **_Optional <br/> (Default - null)_** |
+| **_deployment\_minimum\_healthy\_percent_** | _The lower limit of the number <br/> of running tasks that must remain running <br/> and healthy in a service during a deployment_ | _string_ | **_Optional <br/> (Default - null)_** |
 | **_desired\_count_** | _The number of instances of the task <br/> definition to place and keep running_ | _string_ | **_Optional <br/> (Default - null)_** |
 | **_enable\_ecs\_managed\_tags_** | _Specifies whether to enable Amazon ECS managed <br/> tags for the tasks within the service_ | _string_ | **_Optional <br/> (Default - null)_** |
 | **_health\_check\_grace\_period\_seconds_** | _Seconds to ignore failing load balancer health <br/> checks on newly instantiated tasks to prevent premature shutdown_ | _number_ | **_Optional <br/> (Default - 0)_** |
