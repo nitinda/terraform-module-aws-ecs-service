@@ -61,7 +61,7 @@ _The variables required in order for the module to be successfully called from t
 | **_desired\_count_** | _The number of instances of the task <br/> definition to place and keep running_ | _string_ | **_Optional <br/> (Default - null)_** |
 | **_enable\_ecs\_managed\_tags_** | _Specifies whether to enable <br/> Amazon ECS managed tags for <br/> the tasks within the service_ | _string_ | **_Optional <br/> (Default - null)_** |
 | **_health\_check\_grace\_period\_seconds_** | _Seconds to ignore failing load balancer health <br/> checks on newly instantiated tasks to prevent premature shutdown_ | _number_ | **_Optional <br/> (Default - 0)_** |
-| **_iam\_role_** | _ARN of the IAM role that allows Amazon ECS to <br/> make calls to your load balancer on your behalf_ | _string_ | **_Optional <br/> (Default - null)_** |
+| **_iam\_role_** | _ARN of the IAM role that allows <br/> Amazon ECS to make calls to your <br/> load balancer on your behalf_ | _string_ | **_Optional <br/> (Default - null)_** |
 | **_launch\_type_** | _The launch type on which to run your service_ | _string_ | **_Optional <br/> (Default - EC2)_** |
 | **_load\_balancer_** | _A load balancer block_ | _any_ | **_Optional <br/> (Default - {})_** |
 | **_network\_configuration_** | _The network configuration for the service_ | _any_ | **_Optional <br/> (Default - {})_** |
