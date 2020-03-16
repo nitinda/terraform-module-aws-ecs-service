@@ -16,17 +16,11 @@ _You can download the latest Terraform version from_ [_here_](https://www.terraf
 
 ---
 
-## _Features Branches_
+## _Features_
 
 _Below we are able to check the resources that are being created as part of this module call:_
 
-_From branch : **terraform-11/master**_
-
-- _**ECS Service (Terraform 11 supported code)**_
-
-_From branch : **terraform-12/master**_
-
-- _**ECS Service (Terraform 12 supported code)**_
+- _**ECS Service**_
 
 
 ---
