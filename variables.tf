@@ -35,6 +35,11 @@ variable "desired_count" {
   default     = null
 }
 
+variable "enable_ecs_managed_tags" {
+  description = "Specifies whether to enable Amazon ECS managed tags for the tasks within the service"
+  default     = null
+}
+
 variable "health_check_grace_period_seconds" {
   description = "Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown"
   default     = 0
