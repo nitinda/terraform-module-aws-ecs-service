@@ -13,7 +13,7 @@ resource "aws_ecs_service" "ecs_service" {
   cluster = var.cluster
 
   dynamic "deployment_controller" {
-    for_each = var.deployment_controller
+    for_each = length(keys(var.deployment_controller)) == 0 ? [] : [var.deployment_controller]
     content {
       type = lookup(deployment_controller.value, "type", null)
     }

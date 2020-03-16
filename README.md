@@ -52,7 +52,20 @@ _The variables required in order for the module to be successfully called from t
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
 |:----|:----|-----:|:---:|
+| **_name_** | _The name of the service_ | _string_ | **_Required_** |
+| **_capacity\_provider\_strategy_** | _The capacity provider strategy to use for the service_ | _any_ | **_Optional <br/> (Default - [])_** |
+| **_cluster_** | _ARN of an ECS cluster_ | _string_ | **_Optional <br/> (Default - null)_** |
+| **_deployment\_controller_** | _Configuration block containing <br/> deployment controller configuration_ | _map(string)_ | **_Optional <br/> (Default - {})_** |
+| **_deployment\_maximum\_percent_** | _The upper limit of the number of running tasks that <br/> can be running in a service during a deployment_ | _string_ | **_Optional <br/> (Default - null)_** |
+| **_deployment\_minimum\_healthy\_percent_** | _The lower limit of the number of running tasks that <br/> must remain running and healthy in a service during a deployment_ | _string_ | **_Optional <br/> (Default - null)_** |
+| **_desired\_count_** | _The number of instances of the task <br/> definition to place and keep running_ | _string_ | **_Optional <br/> (Default - null)_** |
+| **_enable\_ecs\_managed\_tags_** | _Specifies whether to enable Amazon ECS managed <br/> tags for the tasks within the service_ | _string_ | **_Optional <br/> (Default - null)_** |
+| **_health\_check\_grace\_period\_seconds_** | _Seconds to ignore failing load balancer health <br/> checks on newly instantiated tasks to prevent premature shutdown_ | _number_ | **_Optional <br/> (Default - 0)_** |
+| **_iam\_role_** | _ARN of the IAM role that allows Amazon ECS to <br/> make calls to your load balancer on your behalf_ | _string_ | **_Optional <br/> (Default - null)_** |
+| **_launch\_type_** | _The launch type on which to run your service_ | _string_ | **_Optional <br/> (Default - EC2)_** |
+
 | **_tags_** | _Key-value mapping of resource tags_ | _map(string)_ | **_Required_** |
+
 
 ---
 
