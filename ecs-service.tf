@@ -67,7 +67,7 @@ resource "aws_ecs_service" "ecs_service" {
   scheduling_strategy = var.scheduling_strategy
 
   dynamic "service_registries" {
-    for_each = var.service_registries
+    for_each = length(keys(var.service_registries)) == 0 ? [] : [var.service_registries]
     content {
       container_name = lookup(service_registries.value, "container_name", null)
       container_port = lookup(service_registries.value, "container_port", null)

@@ -90,6 +90,12 @@ variable "scheduling_strategy" {
   default     = "REPLICA"
 }
 
+variable "service_registries" {
+  description = "The service discovery registries for the service"
+  type        = map(string)
+  default     = {}
+}
+
 variable "tags" {
   description = "A mapping of tags to assign to the resource"
   type        = map(string)
