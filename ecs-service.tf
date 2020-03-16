@@ -28,7 +28,7 @@ resource "aws_ecs_service" "ecs_service" {
   launch_type                        = var.launch_type
 
   dynamic "load_balancer" {
-    for_each = var.load_balancer
+    for_each = length(keys(var.load_balancer)) == 0 ? [] : [var.load_balancer]
     content {
       container_name   = load_balancer.value.container_name
       container_port   = load_balancer.value.container_port
@@ -38,7 +38,7 @@ resource "aws_ecs_service" "ecs_service" {
   }
   
   dynamic "network_configuration" {
-    for_each = var.network_configuration
+    for_each = length(keys(var.network_configuration)) == 0 ? [] : [var.network_configuration]
     content {
       assign_public_ip = lookup(network_configuration.value, "assign_public_ip", null)
       security_groups  = lookup(network_configuration.value, "security_groups", null)
@@ -47,7 +47,7 @@ resource "aws_ecs_service" "ecs_service" {
   }
 
   dynamic "ordered_placement_strategy" {
-    for_each = var.ordered_placement_strategy
+    for_each = length(keys(var.ordered_placement_strategy)) == 0 ? [] : [var.ordered_placement_strategy]
     content {
       field = lookup(ordered_placement_strategy.value, "field", null)
       type  = ordered_placement_strategy.value.type
@@ -55,7 +55,7 @@ resource "aws_ecs_service" "ecs_service" {
   }
 
   dynamic "placement_constraints" {
-    for_each = var.placement_constraints
+    for_each = length(keys(var.placement_constraints)) == 0 ? [] : [var.placement_constraints]
     content {
       expression = lookup(placement_constraints.value, "expression", null)
       type       = placement_constraints.value.type
