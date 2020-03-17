@@ -1,5 +1,13 @@
 # _Terraform Module: terraform-module-aws-ecs-service_
+<!--BEGIN STABILITY BANNER-->
+---
 
+![_Code : Stable_](https://img.shields.io/badge/Code-Stable-brightgreen?style=for-the-badge&logo=github)
+
+>
+
+---
+<!--END STABILITY BANNER-->
 
 ## _General_
 
